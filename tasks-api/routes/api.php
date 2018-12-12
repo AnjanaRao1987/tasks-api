@@ -19,6 +19,7 @@ $router->group(["prefix" => "tasks"], function ($router) {
 	$router->post("", "Tasks@store");
 	$router->get("", "Tasks@index");
     $router->get("{task}", "Tasks@show");
+    $router->delete("{task}", "Tasks@destroy");
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
