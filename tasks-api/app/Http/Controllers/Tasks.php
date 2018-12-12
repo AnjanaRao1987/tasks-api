@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Task;
 use App\Http\Requests\TaskRequest;
+use App\Http\Resources\TaskResource;
+use App\Http\Resources\TaskListResource;
 
 
 class Tasks extends Controller
@@ -17,7 +19,7 @@ class Tasks extends Controller
      */
     public function index()
     {
-      return Task::all();
+      return TaskListResource::collection(Task::all());
     }
 
     /**
