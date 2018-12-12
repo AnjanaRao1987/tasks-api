@@ -37,7 +37,7 @@ class Tasks extends Controller
         $task = Task::create($data);
 
         // return the article along with a 201 status code
-        return response($task, 201);
+         return new TaskResource($task);
     }
 
     /**
@@ -58,9 +58,16 @@ class Tasks extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TaskRequest $request, Task $task)
     {
-        //
+        $data = $request->only(["task"]);
+
+
+        // update the article
+        $task->fill($data)->save();
+        // return the updated version
+        //return $article;
+        return new TaskResource($task);
     }
 
     /**
