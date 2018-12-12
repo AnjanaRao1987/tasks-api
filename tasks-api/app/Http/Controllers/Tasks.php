@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Task;
+use App\Http\Requests\TaskRequest;
 
 class Tasks extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +25,7 @@ class Tasks extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TaskRequest $request)
     {
         // get post request data for title and article
         $data = $request->only(["task","completed"]);
