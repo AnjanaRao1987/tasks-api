@@ -30,14 +30,9 @@ class Tasks extends Controller
      */
     public function store(TaskRequest $request)
     {
-        // get post request data for title and article
-        $data = $request->only(["task","completed"]);
-
-        //create article with data and store in DB
+        $data = $request->only(["task"]);
         $task = Task::create($data);
-
-        // return the article along with a 201 status code
-         return new TaskResource($task);
+        return new TaskResource(Task::find($task->id));
     }
 
     /**
@@ -61,12 +56,7 @@ class Tasks extends Controller
     public function update(TaskRequest $request, Task $task)
     {
         $data = $request->only(["task"]);
-
-
-        // update the article
         $task->fill($data)->save();
-        // return the updated version
-        //return $article;
         return new TaskResource($task);
     }
 
@@ -80,5 +70,20 @@ class Tasks extends Controller
     {
         $task->delete();
         return response(null, 204);
+    }
+
+
+        /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function patch(Task $task)
+    {
+        $task->completed = 1;
+        $task->save();
+        return new TaskResource($task);
     }
 }

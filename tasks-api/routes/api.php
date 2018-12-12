@@ -21,6 +21,7 @@ $router->group(["prefix" => "tasks"], function ($router) {
     $router->get("{task}", "Tasks@show");
     $router->delete("{task}", "Tasks@destroy");
     $router->put("{task}", "Tasks@update");
+    $router->patch("{task}/completed", "Tasks@patch");
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
