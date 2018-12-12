@@ -14,7 +14,9 @@ use Illuminate\Http\Request;
 */
 
 $router->post("tasks", "Tasks@store");
+$router->get("tasks", "Tasks@index");
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+
 });

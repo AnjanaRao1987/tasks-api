@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Task;
 use App\Http\Requests\TaskRequest;
 
+
 class Tasks extends Controller
 {
 
@@ -16,7 +17,7 @@ class Tasks extends Controller
      */
     public function index()
     {
-        //
+      return Task::all();
     }
 
     /**
