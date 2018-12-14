@@ -3,9 +3,9 @@ REST api for tasks
 
 
 # Method = Get
-Link = /api/tasks
-Request Body = Null
-Expected Response = 
+- Link = /api/tasks
+- Request Body = Null
+- Expected Response = 
 
 {
     "data": [
@@ -29,12 +29,12 @@ Expected Response =
 
 
 # Method = Post
-Link = /api/tasks
-Request Body 
+- Link = /api/tasks
+- Request Body 
         {
 	        "task": "one more edit"
         }
-Expected Response = 
+- Expected Response = 
 {
     "data": {
         "id": 317,
@@ -45,12 +45,12 @@ Expected Response =
 
 
 # Method = Put
-Link = /api/tasks/317
-Request Body 
+- Link = /api/tasks/317
+- Request Body 
         {
 	        "task": "one more edit - update"
         }
-Expected Response = 
+- Expected Response = 
 {
     "data": {
         "id": 317,
@@ -60,9 +60,9 @@ Expected Response =
 }
 
 # Method = Patch
-Link = /api/tasks/317/completed
-Request Body = null
-Expected Response = 
+- Link = /api/tasks/317/completed
+- Request Body = null
+- Expected Response = 
 {
     "data": {
         "id": 317,
@@ -73,9 +73,9 @@ Expected Response =
 
 
 # Method = Delete
-Link = /api/tasks/317
-Request Body = null
-Expected Response = null
+- Link = /api/tasks/317
+- Request Body = null
+- Expected Response = null
 
 
 
