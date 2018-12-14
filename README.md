@@ -32,10 +32,10 @@ REST api for tasks
 # Method = Post
 - Link = /api/tasks
 - Request Body 
-      ```  {
-	        "task": "one more edit"
-        }
-        ```
+```{
+"task": "one more edit"
+}
+```
 - Expected Response = 
 ```{
     "data": {
@@ -50,10 +50,10 @@ REST api for tasks
 # Method = Put
 - Link = /api/tasks/317
 - Request Body 
-       ``` {
-	        "task": "one more edit - update"
-        }
-        ```
+```{
+"task": "one more edit - update"
+}
+```
 - Expected Response = 
 ```{
     "data": {
