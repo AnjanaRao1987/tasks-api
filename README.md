@@ -7,7 +7,7 @@ REST api for tasks
 - Request Body = Null
 - Expected Response = 
 
-{
+```{
     "data": [
         {
             "id": 307,
@@ -25,7 +25,7 @@ REST api for tasks
             "completed": true
         }
    ]
-}
+}```
 
 
 # Method = Post
