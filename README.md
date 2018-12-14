@@ -7,7 +7,8 @@ REST api for tasks
 - Request Body = Null
 - Expected Response = 
 
-```{
+```
+{
     "data": [
         {
             "id": 307,
@@ -32,12 +33,14 @@ REST api for tasks
 # Method = Post
 - Link = /api/tasks
 - Request Body 
-```{
+```
+{
 "task": "one more edit"
 }
 ```
 - Expected Response = 
-```{
+```
+{
     "data": {
         "id": 317,
         "task": "one more edit",
@@ -50,12 +53,14 @@ REST api for tasks
 # Method = Put
 - Link = /api/tasks/317
 - Request Body 
-```{
+```
+{
 "task": "one more edit - update"
 }
 ```
 - Expected Response = 
-```{
+```
+{
     "data": {
         "id": 317,
         "task": "one more edit - update",
@@ -68,7 +73,8 @@ REST api for tasks
 - Link = /api/tasks/317/completed
 - Request Body = null
 - Expected Response = 
-```{
+```
+{
     "data": {
         "id": 317,
         "task": "one more edit - update",
