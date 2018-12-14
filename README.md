@@ -1,10 +1,10 @@
-##API Documentation
+# API Documentation
 
-# tasks-api
+## tasks-api
 REST api for tasks
 
 
-# Method = Get
+## Method = Get
 - Link = /api/tasks
 - Request Body = Null
 - Expected Response = 
@@ -32,7 +32,7 @@ REST api for tasks
 ```
 
 
-# Method = Post
+## Method = Post
 - Link = /api/tasks
 - Request Body 
 ```
@@ -52,7 +52,7 @@ REST api for tasks
 ```
 
 
-# Method = Put
+## Method = Put
 - Link = /api/tasks/317
 - Request Body 
 ```
@@ -71,7 +71,7 @@ REST api for tasks
 }
 ```
 
-# Method = Patch
+## Method = Patch
 - Link = /api/tasks/317/completed
 - Request Body = null
 - Expected Response = 
@@ -85,7 +85,7 @@ REST api for tasks
 }
 ```
 
-# Method = Delete
+## Method = Delete
 - Link = /api/tasks/317
 - Request Body = null
 - Expected Response = null
